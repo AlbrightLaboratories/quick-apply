@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  /* White & Gold Theme */
+  --white-pure: #FFFFFF;
+  --white-soft: #F8F9FA;
+  --gold-rich: #D4AF37;
+  --gold-deep: #B8960C;
+  --gold-dark: #8B7500;
+  --charcoal: #2D2D2D;
+  --gray-soft: #6C757D;
+
+  --background: var(--white-pure);
+  --foreground: var(--charcoal);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-gold: var(--gold-rich);
+  --color-gold-deep: var(--gold-deep);
+  --color-gold-dark: var(--gold-dark);
+  --color-soft-white: var(--white-soft);
+  --color-charcoal: var(--charcoal);
+  --color-gray: var(--gray-soft);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Gold gradient for buttons */
+.gold-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #B8960C 100%);
+}
+
+.gold-gradient:hover {
+  background: linear-gradient(135deg, #B8960C 0%, #8B7500 100%);
+}
+
+/* Subtle gold border */
+.gold-border {
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.gold-border:hover {
+  border-color: rgba(212, 175, 55, 0.6);
+}
+
+/* Gold text gradient */
+.gold-text {
+  background: linear-gradient(135deg, #D4AF37 0%, #8B7500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
